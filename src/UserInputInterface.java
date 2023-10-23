@@ -7,4 +7,5 @@ public interface UserInputInterface {
 
     double getAmountToConvert();
     void setAmountToConvert(double amountToConvert);
+    public void inputUserValues();
 }
