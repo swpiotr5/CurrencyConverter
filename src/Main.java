@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class Main {
@@ -18,9 +19,12 @@ public class Main {
         CurrencyConverterInterface currencyConverter = new CurrencyConverter();
         double convertedAmount = currencyConverter.convertCurrency(user.getAmountToConvert(), currencyCollection, user.getSourceCurrencyCode(), user.getTargetCurrencyCode());
         if (convertedAmount != -1){
-        System.out.println(
+            DecimalFormat decimalFormat = new DecimalFormat("#.00");
+            String formattedConvertedAmount = decimalFormat.format(convertedAmount);
+
+            System.out.println(
                 user.getAmountToConvert() + " " + user.getSourceCurrencyCode() + " is equivalent to " +
-                        convertedAmount + " " + user.getTargetCurrencyCode()
+                        formattedConvertedAmount + " " + user.getTargetCurrencyCode()
         );
         };
     }

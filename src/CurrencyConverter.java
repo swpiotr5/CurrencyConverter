@@ -16,7 +16,6 @@ public class CurrencyConverter implements CurrencyConverterInterface {
         double targetExchangeRate = targetCurrency.getExchangeRate();
 
         double convertedAmount = amount * targetConverter/sourceConverter * (sourceExchangeRate / targetExchangeRate);
-        System.out.println(convertedAmount + " " + amount + " " + targetConverter + " " + sourceConverter+ " " +sourceExchangeRate + " " + targetConverter);
         return convertedAmount;
     }
 }
