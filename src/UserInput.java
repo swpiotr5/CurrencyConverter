@@ -43,10 +43,10 @@ public class UserInput implements UserInputInterface {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Podaj kod waluty źródłowej: ");
-        sourceCurrencyCode = scanner.nextLine();
+        sourceCurrencyCode = scanner.nextLine().toUpperCase();
 
         System.out.print("Podaj kod waluty docelowej: ");
-        targetCurrencyCode = scanner.nextLine();
+        targetCurrencyCode = scanner.nextLine().toUpperCase();
 
         while (amountToConvert <= 0) {
             System.out.print("Podaj kwotę do konwersji: ");

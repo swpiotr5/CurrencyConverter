@@ -19,7 +19,7 @@ public class Main {
         CurrencyConverterInterface currencyConverter = new CurrencyConverter();
         double convertedAmount = currencyConverter.convertCurrency(user.getAmountToConvert(), currencyCollection, user.getSourceCurrencyCode(), user.getTargetCurrencyCode());
         if (convertedAmount != -1){
-            DecimalFormat decimalFormat = new DecimalFormat("#.00");
+            DecimalFormat decimalFormat = new DecimalFormat("0.00");
             String formattedConvertedAmount = decimalFormat.format(convertedAmount);
 
             System.out.println(
